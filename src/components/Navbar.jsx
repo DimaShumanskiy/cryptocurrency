@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Menu, Typography, Avatar} from 'antd'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import {
     MenuOutLined,
     FundOutlined,
@@ -16,21 +16,21 @@ const Navbar = () => {
             <div className='logo-container'>
                 <Avatar src={icon} size='large'/>
                 <Typography.Title level={2} className='logo'>
-                    <Link to='/'>Crytoverse</Link>
+                    <NavLink to={'/'}>Crytoverse</NavLink>
                 </Typography.Title>
             </div>
             <Menu theme='dark'>
                 <Menu.Item icon={<HomeOutlined/>}>
-                    <Link to='/'>Home</Link>
+                    <NavLink to={'/'}>Home</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<FundOutlined/>}>
-                    <Link to='/сryptocurrencies'>Cryptocurrencies</Link>
+                    <NavLink to={'/cryptocurrencies'}>Cryptocurrencies</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<MoneyCollectOutlined/>}>
-                    <Link to='/exchanges'>Exchanges</Link>
+                    <NavLink to={'/exchanges'}>Exchanges</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<BulbOutlined/>}>
-                    <Link to='/news'>News</Link>
+                    <NavLink to={'/news'}>News</NavLink>
                 </Menu.Item>
             </Menu>
         </div>
